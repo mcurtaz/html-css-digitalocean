@@ -9,6 +9,7 @@ body{
   display: none;
   position: absolute;
   z-index: 100;
+  transform: translate(-25% , -10px);
 }
 
 .dropdown:hover .dropdown-menu{
@@ -16,13 +17,13 @@ body{
 }
 
 .dropdown-menu ul{
-  border: 1px solid #000;
-  border-top: 0;
+  border: 1px solid lightgrey;
   text-align: left;
   min-width: 120px;
   padding: 15px;
   background-color: #fff;
 }
+
 .dropdown-menu li{
   list-style: none;
 }
@@ -63,12 +64,12 @@ header nav a{
   color:#000;
 }
 
-header nav .dropdown{
+header nav .hidden-lg .dropdown{
   display: inline-block;
 }
 
-header nav .dropdown-menu{
-  transform: translate( calc(-100% + 1.5em) , 0);
+header nav .hidden-lg .dropdown-menu{
+  transform: translate( calc(-100% + 1em) , -10px);
 }
 
 
