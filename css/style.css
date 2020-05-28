@@ -1,11 +1,10 @@
 /* debug */
 
-.container{
-  background-color: blue;
-}
-
-.debug{
+[class*="col-"]{
   height:100px;
-  background-color: yellow;
+  background-color: grey;
   border: 1px solid black;
+  line-height: 100px;
+  color: white;
+  text-align: center;
 }
