@@ -1,10 +1,42 @@
 /* debug */
 
 [class*="col-"]{
-  height:100px;
-  background-color: grey;
+  min-height:100px;
+  background-color: lightblue;
   border: 1px solid black;
   line-height: 100px;
   color: white;
   text-align: center;
+  opacity: 0.8;
+}
+
+
+header{
+  background-color: blue;
+}
+
+header nav{
+  background-color: #fff;
+}
+
+.s-grey{
+  background-color: lightgrey;
+}
+
+.s-minicard .row .row [class*="col-"],
+footer .row .row [class*="col-"]{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.s-carousel{
+  background-color: lightgrey;
+}
+
+.s-gradient{
+  background-color: darkblue;
+}
+
+footer{
+  background-color: black;
 }
