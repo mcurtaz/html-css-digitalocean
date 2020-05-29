@@ -35,9 +35,6 @@ a{
 }
 
 /* header */
-header{
-  background-color: blue;
-}
 
 /* navbar */
 
@@ -132,6 +129,7 @@ header nav .hidden-lg .dropdown-menu{
   background-color: #fff;
   box-shadow: 0 0 5px lightgrey;
   border: 1px solid lightgrey;
+  margin-bottom: 15px;
 }
 
 #google-button img{
@@ -142,11 +140,56 @@ header nav .hidden-lg .dropdown-menu{
   height: 30px;
 }
 
+.form>span:last-child{
+  font-size: 12px;
+}
 
+
+/* sezione loghi */
 
 .s-grey{
-  background-color: lightgrey;
+  background-color: #f3f5f9;
+  text-align: center;
+  padding: 30px 0;
 }
+
+#logo-list{
+  text-align: center;
+}
+
+.logo-wrapper {
+  display: inline-block;
+  width: 15%;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.logo-wrapper img{
+  width: 100%;
+}
+
+  /* mediaqueries per disporre diversamente i loghi */
+
+  @media screen and (max-width:768px){
+    .logo-wrapper {
+      display: inline-block;
+      width: 49%;
+      vertical-align: middle;
+    }
+
+
+  }
+
+/* sezione minicard */
+
+.s-minicard{
+  text-align: center;
+  padding: 30px 0;
+}
+
+
+
+
 
 .s-minicard .row .row [class*="col-"],
 footer .row .row [class*="col-"]{
