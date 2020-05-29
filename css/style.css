@@ -9,6 +9,14 @@ a{
   cursor: pointer;
 }
 
+.s-minicard .row .row [class*="col-"],  /* togliere padding a colonne nestate */
+footer .row .row [class*="col-"]{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
 /* dropdown */
 
 .dropdown-menu{
@@ -33,6 +41,7 @@ a{
 .dropdown-menu li{
   list-style: none;
 }
+
 
 /* header */
 
@@ -74,6 +83,7 @@ header nav .hidden-lg .dropdown{
 header nav .hidden-lg .dropdown-menu{
   transform: translate( calc(-100% + 1em) , -10px);
 }
+
 
 /* jumbotron */
 
@@ -180,7 +190,9 @@ header nav .hidden-lg .dropdown-menu{
 
   }
 
-/* sezione minicard */
+
+
+/* sezione minicard (che si ripropone due volte in pagina)*/
 
 .s-minicard{
   text-align: center;
@@ -201,15 +213,22 @@ header nav .hidden-lg .dropdown-menu{
   padding-top: 15px;
 }
 
-.s-minicard a{
-  display: inline-block;
-  color: lightgrey;
+.s-minicard li{
   padding: 15px;
   border-left: 1px solid lightgrey;
 }
 
-.s-minicard a:hover{
+.s-minicard li:hover{
   border-left: 2px solid blue;
+}
+
+.s-minicard a{
+  color: lightgrey;
+}
+
+.s-minicard li:hover a{
+  font-weight: bold;
+  color: grey;
 }
 
 
@@ -228,17 +247,64 @@ header nav .hidden-lg .dropdown-menu{
   width: 40px;
 }
 
-
-
-.s-minicard .row .row [class*="col-"],
-footer .row .row [class*="col-"]{
-  padding-left: 0;
-  padding-right: 0;
+.s-minicard .minicard p{
+  margin-bottom: 15px;
 }
+
+.s-minicard a:last-child{
+ color: blue;
+}
+
+.s-minicard a:last-child:hover{
+ color: darkblue;
+}
+
+
+
+/* sezione carousel (che si ripropone due volte in pagina)*/
 
 .s-carousel{
-  background-color: lightgrey;
+  background-color: #f3f5f9;
+  text-align: center;
+  padding: 30px 0;
 }
+
+.s-carousel h2{
+  margin: 20px 0;
+}
+
+
+.s-carousel img{
+  width: 70%;
+  vertical-align: middle;
+  margin: 45px 15px 20px;
+}
+
+.s-carousel span [class*="fa-angle-"]{
+  font-size: 40px;
+  color: darkblue;
+  opacity: 0.6;
+}
+
+.s-carousel span [class*="fa-angle-"]:hover{
+  opacity: 1;
+}
+
+.s-carousel span:last-child{
+  display: block;
+  font-size: 14px;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.pallini{
+  margin-top: 25px;
+}
+
+.pallini a{
+  color: blue;
+}
+
 
 .s-gradient{
   background-color: darkblue;
