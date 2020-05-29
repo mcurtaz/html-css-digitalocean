@@ -55,6 +55,7 @@ header nav{
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 header nav [alt="logo"]{
@@ -251,11 +252,11 @@ header nav .hidden-lg .dropdown-menu{
   margin-bottom: 15px;
 }
 
-.s-minicard a:last-child{
+.minicard a:last-child{
  color: blue;
 }
 
-.s-minicard a:last-child:hover{
+.minicard a:last-child:hover{
  color: darkblue;
 }
 
@@ -295,13 +296,10 @@ header nav .hidden-lg .dropdown-menu{
   font-size: 14px;
   color: darkblue;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.pallini{
-  margin-top: 25px;
-}
-
-.pallini a{
+.s-carousel a{
   color: blue;
 }
 
@@ -383,9 +381,50 @@ header nav .hidden-lg .dropdown-menu{
   color: blue;
 }
 
-
+/* footer */
 
 footer{
   background-color: #031c4e;
   color: grey;
+  padding: 30px 0 40px;
+}
+
+footer a{
+  color: grey;
+}
+
+footer a:hover{
+  color: #fff;
+}
+
+.copyright img{
+  width: 50px;
+  margin-bottom: 12px;
+}
+
+.copyright span{
+  display: block;
+  font-size: 14px;
+}
+
+.copyright span:last-of-type{
+  color: darkgrey;
+  margin-bottom: 15px;
+}
+
+.copyright .fab{
+  margin-right: 10px;
+}
+
+footer ul{
+  list-style: none;
+}
+
+footer li{
+  padding: 7px;
+}
+
+footer li:first-child{
+  color: #fff;
+  margin-bottom: 10px;
 }
