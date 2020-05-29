@@ -187,7 +187,46 @@ header nav .hidden-lg .dropdown-menu{
   padding: 30px 0;
 }
 
+.s-minicard h2{
+  margin: 20px 0;
+}
 
+.s-minicard p{
+  margin-bottom: 40px;
+}
+
+.s-minicard ul{
+  list-style: none;
+  text-align: left;
+  padding-top: 15px;
+}
+
+.s-minicard a{
+  display: inline-block;
+  color: lightgrey;
+  padding: 15px;
+  border-left: 1px solid lightgrey;
+}
+
+.s-minicard a:hover{
+  border-left: 2px solid blue;
+}
+
+
+.s-minicard .minicard{
+  padding: 15px;
+  text-align: left;
+}
+
+
+.s-minicard .minicard h4{
+  margin: 12px 0;
+}
+
+
+.s-minicard .minicard img{
+  width: 40px;
+}
 
 
 
