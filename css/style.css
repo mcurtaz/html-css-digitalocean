@@ -9,39 +9,17 @@ a{
   cursor: pointer;
 }
 
+
+
+h3{
+  margin: 20px 0;
+}
+
 .s-minicard .row .row [class*="col-"],  /* togliere padding a colonne nestate */
 footer .row .row [class*="col-"]{
   padding-left: 0;
   padding-right: 0;
 }
-
-
-
-/* dropdown */
-
-.dropdown-menu{
-  display: none;
-  position: absolute;
-  z-index: 100;
-  transform: translate(-25% , -10px);
-}
-
-.dropdown:hover .dropdown-menu{
-  display: block;
-}
-
-.dropdown-menu ul{
-  border: 1px solid lightgrey;
-  text-align: left;
-  min-width: 120px;
-  padding: 15px;
-  background-color: #fff;
-}
-
-.dropdown-menu li{
-  list-style: none;
-}
-
 
 /* header */
 
@@ -63,7 +41,7 @@ header nav [alt="logo"]{
   vertical-align: middle;
 }
 
-header nav [class*="col-"]:last-child{
+header nav>.container>.row>[class*="col-"]:last-child{
   text-align: right;
 }
 
@@ -77,14 +55,122 @@ header nav a{
   color:#000;
 }
 
+header nav .button{
+  display: inline;
+  padding: 10px;
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+
+header nav .button:hover{
+  background-color: blue;
+  color: #fff;
+}
+
 header nav .hidden-lg .dropdown{
   display: inline-block;
 }
 
-header nav .hidden-lg .dropdown-menu{
-  transform: translate( calc(-100% + 1em) , -10px);
+
+/* dropdown della nav */
+
+.dropdown-menu{
+  width: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 100;
+  border: 1px solid lightgrey;
+  background-color: #fff;
+  line-height: normal;
+  text-align: left;
 }
 
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+.dropdown-menu a:hover{
+  color: blue;
+}
+
+nav .dropdown-menu{
+  padding: 0 12%;
+}
+
+nav .dropdown-menu .row{
+  border-bottom: 1px solid lightgrey;
+}
+
+.dropdown-menu ul{
+  list-style: none;
+  text-align: left;
+}
+
+.dropdown-left li, .dropdown-right li{
+  padding: 10px;
+}
+
+.dropdown-left li:first-child{
+  font-weight: bold;
+  color: darkgrey;
+  padding-left: 35px;
+  text-transform: uppercase;
+}
+
+.dropdown-left li img{
+  width: 45px;
+}
+
+.dropdown-left li .testo{
+  padding-left: 10px;
+  display: inline-block;
+  width: calc(100% - 50px);
+}
+
+.dropdown-left li .testo h4{
+  margin: 0 0 10px;
+}
+
+.dropdown-left,
+.dropdown-right{
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.dropdown-right{
+  border-left: 1px solid lightgrey;
+}
+
+.dropdown-right img{
+  width: 30px;
+  vertical-align: middle;
+}
+
+.dropdown-right ul{
+  width: calc(100% - 35px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dropdown-right li:first-child{
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  color: darkgrey;
+  text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 992px){
+
+  nav .dropdown-menu{
+    padding: 0;
+  }
+
+}
 
 /* jumbotron */
 
@@ -183,9 +269,7 @@ header nav .hidden-lg .dropdown-menu{
 
   @media screen and (max-width:768px){
     .logo-wrapper {
-      display: inline-block;
       width: 49%;
-      vertical-align: middle;
     }
 
 
