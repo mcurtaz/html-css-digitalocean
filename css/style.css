@@ -2,6 +2,7 @@
 
 body{
   font-family: sans-serif;
+  text-align: center;
 }
 
 a{
@@ -9,17 +10,72 @@ a{
   cursor: pointer;
 }
 
+ul{
+  list-style: none;
+  text-align: left;
+}
 
+li{
+  padding: 10px;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 900;
+  margin: 25px 0;
+}
+
+h2{
+  font-size: 35px;
+  font-weight: bolder;
+  margin: 25px 0;
+}
 
 h3{
   margin: 20px 0;
 }
+
+h4{
+  margin: 12px 0;
+}
+
+.button{
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px lightgrey;
+  transition: background 0.5s;
+}
+
+.blue-link{
+  color: blue;
+}
+
+.blue-link:hover{
+  color: darkblue;
+}
+
+.section-padding-y{
+  padding: 30px 0;
+}
+
+
+.bg-grey{
+  background-color: #f3f5f9;
+}
+
+.bg-gradient{
+  color: #fff;
+  background: linear-gradient(0deg, rgb(0, 30, 154), rgb(0, 70, 197));
+}
+
 
 .s-minicard .row .row [class*="col-"],  /* togliere padding a colonne nestate */
 footer .row .row [class*="col-"]{
   padding-left: 0;
   padding-right: 0;
 }
+
 
 /* header */
 
@@ -48,6 +104,7 @@ header nav>.container>.row>[class*="col-"]:last-child{
 header nav .inline_ul>li{
   display: inline-block;
   margin-left: 15px;
+  padding: 0;
 }
 
 header nav a{
@@ -55,13 +112,14 @@ header nav a{
   color:#000;
 }
 
+header nav a:hover{
+  color: blue;
+}
+
 header nav .button{
   display: inline;
-  padding: 10px;
   color: blue;
-  border: 1px solid blue;
-  border-radius: 10px;
-  transition: background 0.5s;
+  border-color: blue;
 }
 
 header nav .button:hover{
@@ -74,7 +132,7 @@ header nav .hidden-lg .dropdown{
 }
 
 
-/* dropdown della nav */
+/* Navbar dropdown */
 
 .dropdown-menu{
   width: 100%;
@@ -87,6 +145,9 @@ header nav .hidden-lg .dropdown{
   background-color: #fff;
   line-height: normal;
   text-align: left;
+  /* regole per rendere scrollabile il menu se esce dallo schermo in verticale sopratutto nel menu hamburger */
+  max-height: calc(100vh - 50px);
+  overflow-y: scroll;
 }
 
 .dropdown:hover .dropdown-menu{
@@ -98,26 +159,20 @@ header nav .hidden-lg .dropdown{
 }
 
 nav .dropdown-menu{
+  /* centra i menù dropdown poi con una media query tolgo questo padding su smartphone e tablet */
   padding: 0 12%;
 }
 
 nav .dropdown-menu .row{
+  /* nel menù hamburger una linea divide le varie sezioni */
   border-bottom: 1px solid lightgrey;
 }
 
-.dropdown-menu ul{
-  list-style: none;
-  text-align: left;
-}
-
-.dropdown-left li, .dropdown-right li{
-  padding: 10px;
-}
-
-.dropdown-left li:first-child{
+.dropdown-left li:first-child,
+.dropdown-right li:first-child{
+  /* titolo delle liste di link */
   font-weight: bold;
   color: darkgrey;
-  padding-left: 35px;
   text-transform: uppercase;
 }
 
@@ -126,13 +181,10 @@ nav .dropdown-menu .row{
 }
 
 .dropdown-left li .testo{
+  /* testo che si affianca all'immagine */
   padding-left: 10px;
   display: inline-block;
   width: calc(100% - 50px);
-}
-
-.dropdown-left li .testo h4{
-  margin: 0 0 10px;
 }
 
 .dropdown-left,
@@ -141,10 +193,12 @@ nav .dropdown-menu .row{
   padding-bottom: 20px;
 }
 
-.dropdown-right{
-  border-left: 1px solid lightgrey;
+.dropdown-left{
+  /* line verticale a separare le sezioni */
+  border-right: 1px solid lightgrey;
 }
 
+/* liste della parte destra dei dropdown */
 .dropdown-right img{
   width: 30px;
   vertical-align: middle;
@@ -156,18 +210,15 @@ nav .dropdown-menu .row{
   vertical-align: top;
 }
 
-.dropdown-right li:first-child{
-  padding: 5px 10px 5px 10px;
-  font-weight: bold;
-  color: darkgrey;
-  text-transform: uppercase;
-}
-
 
 @media screen and (max-width: 992px){
 
   nav .dropdown-menu{
     padding: 0;
+  }
+
+  .dropdown-right{
+    border-left: 0;
   }
 
 }
@@ -180,11 +231,6 @@ nav .dropdown-menu .row{
   color: #fff;
 }
 
-.jumbotron h1{
-  font-size: 40px;
-  font-weight: 800;
-  margin: 25px 0;
-}
 
 .jumbotron p{
   color: lightgrey;
@@ -199,10 +245,6 @@ nav .dropdown-menu .row{
   padding: 10px;
 }
 
-.form h2{
-  margin: 15px 0;
-}
-
 .form input{
   width: 100%;
   height: 3em;
@@ -214,9 +256,8 @@ nav .dropdown-menu .row{
 
 .form .button{
   margin-top: 20px;
-  border-radius: 5px;
-  padding: 10px;
   background-color: lightblue;
+  border-color: lightblue;
   color: #fff;
 }
 
@@ -224,8 +265,7 @@ nav .dropdown-menu .row{
   color: #000;
   position: relative;
   background-color: #fff;
-  box-shadow: 0 0 5px lightgrey;
-  border: 1px solid lightgrey;
+  border-color: lightgrey;
   margin-bottom: 15px;
 }
 
@@ -243,12 +283,6 @@ nav .dropdown-menu .row{
 
 
 /* sezione loghi */
-
-#s-loghi{
-  background-color: #f3f5f9;
-  text-align: center;
-  padding: 30px 0;
-}
 
 #logo-list{
   text-align: center;
@@ -279,22 +313,11 @@ nav .dropdown-menu .row{
 
 /* sezione minicard (che si ripropone due volte in pagina)*/
 
-.s-minicard{
-  text-align: center;
-  padding: 30px 0;
-}
-
-.s-minicard h2{
-  margin: 20px 0;
-}
-
 .s-minicard p{
   margin-bottom: 40px;
 }
 
 .s-minicard ul{
-  list-style: none;
-  text-align: left;
   padding-top: 15px;
 }
 
@@ -307,7 +330,7 @@ nav .dropdown-menu .row{
   border-left: 2px solid blue;
 }
 
-.s-minicard a{
+.s-minicard ul a{
   color: lightgrey;
 }
 
@@ -316,17 +339,10 @@ nav .dropdown-menu .row{
   color: grey;
 }
 
-
 .s-minicard .minicard{
   padding: 15px;
   text-align: left;
 }
-
-
-.s-minicard .minicard h4{
-  margin: 12px 0;
-}
-
 
 .s-minicard .minicard img{
   width: 40px;
@@ -336,28 +352,7 @@ nav .dropdown-menu .row{
   margin-bottom: 15px;
 }
 
-.minicard a:last-child{
- color: blue;
-}
-
-.minicard a:last-child:hover{
- color: darkblue;
-}
-
-
-
 /* sezione carousel (che si ripropone due volte in pagina)*/
-
-.s-carousel{
-  background-color: #f3f5f9;
-  text-align: center;
-  padding: 30px 0;
-}
-
-.s-carousel h2{
-  margin: 20px 0;
-}
-
 
 .s-carousel img{
   width: 70%;
@@ -369,6 +364,7 @@ nav .dropdown-menu .row{
   font-size: 40px;
   color: darkblue;
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .s-carousel span [class*="fa-angle-"]:hover{
@@ -383,22 +379,7 @@ nav .dropdown-menu .row{
   margin-bottom: 10px;
 }
 
-.s-carousel a{
-  color: blue;
-}
-
 /* sezione tabelle */
-
-#s-table{
-  background: linear-gradient(0deg, rgb(0, 30, 154), rgb(0, 70, 197));
-  color: #fff;
-  text-align: center;
-  padding: 30px 0 40px;
-}
-
-#s-table h2{
-  margin-bottom: 30px;
-}
 
 #s-table table{
   border-collapse: collapse;
@@ -443,24 +424,10 @@ nav .dropdown-menu .row{
 
 /* sezione con bottone finale */
 
-#get-started{
-  background: linear-gradient(0deg, rgb(0, 30, 154), rgb(0, 70, 197));
-  padding: 40px 0;
-  text-align: center;
-  color: #fff;
-}
-
-#get-started h2{
-  font-size: 35px;
-  font-weight: bold;
-  margin: 25px 0 30px;
-}
-
-
 #get-started .button{
   display: inline-block;
-  border-radius: 8px;
-  padding: 15px 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: #fff;
   color: blue;
 }
@@ -470,7 +437,6 @@ nav .dropdown-menu .row{
 footer{
   background-color: #031c4e;
   color: grey;
-  padding: 30px 0 40px;
 }
 
 footer a{
@@ -500,9 +466,6 @@ footer a:hover{
   margin-right: 10px;
 }
 
-footer ul{
-  list-style: none;
-}
 
 footer li{
   padding: 7px;
